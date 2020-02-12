@@ -1,0 +1,76 @@
+[[setting-up-client-tools]]
+Setting up client tools
+~~~~~~~~~~~~~~~~~~~~~~~
+
+In this Lab we will look at how to install the OpenShift CLI tools.
+
+*Installing the Command-line Tools*
+
+After completing this section, you should be able to:
+
+* Locate the binaries for the OpenShift Container Platform command-line
+interface (OCP CLI)
+* Install the OCP CLI tools.
+* CLI basic configuration
+
+*Locating the binaries*
+
+The OCP CLI exposes commands for managing applications, as well as
+lower-level tools to interact with each component of a system. The
+binaries for Mac, Windows, and Linux are available for download from the
+this GitHub repository via the following URL.  Please download the file
+appropriate for your operating system.
+
+link:https://github.com/darachchi/openshift_workshop/tree/ocp-stackrox/CLI[https://github.com/darachchi/openshift_workshop/tree/ocp-stackrox/CLI^]
+
+*Installing the CLI tools*
+
+The CLI is provided as compressed files that can be decompressed to any
+directory. In order to make it simple for any user to access the OCP
+CLI, it is recommended that it is made available in a directory mapped
+to the environment variable called `PATH` from the OS. More information
+can be found about installation process here:
+
+link:https://docs.openshift.com/container-platform/latest/cli_reference/get_started_cli.html[https://docs.openshift.com/container-platform/latest/cli_reference/get_started_cli.html^]
+
+1.  *OSX and Linux:*
++
+1.1. Copy the binary to the `/usr/local/bin` directory, or one of the
+paths listed in the `PATH` environment variable.
+2.  *Windows:*
++
+2.1. Use oc.exe to open an OpenShift shell.
+
+
+*CLI basic configuration*
+
+The easiest way to initially setup the OpenShift CLI is to use the
+`oc login` command. It will interactively ask you a server URL, username
+and password. The information is automatically saved in a CLI
+configuration file that is then used for subsequent commands.
+
+To login to a remote server use:
+
+[source,shell]
+----
+$ oc login https://<hostname>:<port>
+----
+
+*Install GIT*
+
+Some of the labs in this workshop leverage repositories that currently reside on Github.  
+
+Prior to doing these labs you must first install the Git program onto your computer.
+
+Click on the following link and use the directions provided to install GIT on your computer.
+
+link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[https://git-scm.com/book/en/v2/Getting-Started-Installing-Git^]
+
+
+
+
+
+
+link:1_Create_App_From_a_Docker_Image.adoc[Next Lab]
+
+link:README.adoc[Table Of Contents]
